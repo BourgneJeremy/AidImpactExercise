@@ -3,12 +3,15 @@
     ViewData["Title"] = "Post page";
 }
 
-<p>
-    @Model.Name
-</p>
-<p>
-    @Model.Longitude
-</p>
-<p>
-    @Model.Latitude
-</p>
+<article class="mt-5 mb-3">
+    <h1>
+        Your city point <b>@Model.Name</b> has been created
+    </h1>
+    <ul class="list-group mt-4">
+        <li class="list-group-item"><b>Longitude</b> : @Model.Longitude</li>
+        <li class="list-group-item"><b>Latitude</b> : @Model.Latitude</li>
+    </ul>
+    <p class="mt-5">
+        <a class="btn btn-outline-secondary" href="@Url.Action("Index", "Home")">Back</a>
+    </p>
+</article>

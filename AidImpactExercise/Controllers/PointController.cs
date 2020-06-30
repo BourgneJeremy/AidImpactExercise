@@ -10,6 +10,13 @@ namespace AidImpactExercise.Controllers
     [Route("point")]
     public class PointController : Controller
     {
+        private readonly PointDataContext _db;
+
+        public PointController(PointDataContext _db)
+        {
+            this._db = _db;
+        }
+
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
@@ -28,12 +35,10 @@ namespace AidImpactExercise.Controllers
             if (!ModelState.IsValid)
                 return View();
 
+            _db.Points.Add(point);
+            _db.SaveChanges();
+
             return RedirectToAction("Post", "Point", point);
         }
-
-        /*public IActionResult Modify()
-        {
-            return View();
-        }*/
     }
 }
