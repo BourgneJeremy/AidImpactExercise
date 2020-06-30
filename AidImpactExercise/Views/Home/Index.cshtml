@@ -34,6 +34,7 @@
                         <form class="mt-1" id="delete" action="@Url.Action("Delete", "Point", point.Id)" method="post">
 							<button type="submit" class="btn btn-outline-secondary">Delete</button>
 					    </form>
+                        <a class="btn-outline-info mt-1" href="@Url.Action("Modify", "Point", new Point() { Name = point.Name, Longitude = point.Longitude, Latitude = point.Latitude })">Modify</a>
                     </li>
                     }
                 </ul>

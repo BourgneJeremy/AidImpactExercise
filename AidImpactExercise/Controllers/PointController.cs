@@ -41,6 +41,33 @@ namespace AidImpactExercise.Controllers
             return RedirectToAction("Post", "Point", point);
         }
 
+        /* Modify test
+        [HttpPost]
+        public IActionResult ModifyPoint(Point point)
+        {
+            // If isn't valid get back to basic view
+            if (!ModelState.IsValid)
+                return View();
+
+            var result = _db.Points.SingleOrDefault(b => b.Id == point.Id);
+            if (result != null)
+            {
+                result.Name = point.Name;
+                result.Longitude = point.Longitude;
+                result.Latitude = point.Latitude;
+
+                _db.SaveChanges();
+            }
+
+            return RedirectToAction("Post", "Point", point);
+        }*/
+
+        /*[HttpGet]
+        public IActionResult Modify(Point point)
+        {
+            return View(point);
+        }*/
+
         [HttpPost]
         public IActionResult Delete(int id)
         {
