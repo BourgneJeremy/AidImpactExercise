@@ -34,3 +34,5 @@ C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netc
 C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netcoreapp3.1\AidImpactExercise.pdb
 C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netcoreapp3.1\AidImpactExercise.genruntimeconfig.cache
 C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netcoreapp3.1\AidImpactExercise.csproj.CopyComplete
+C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netcoreapp3.1\Razor\Views\Point\Create.cshtml.g.cs
+C:\Users\Bourgne\source\repos\AidImpactExercise\AidImpactExercise\obj\Debug\netcoreapp3.1\Razor\Views\Point\Post.cshtml.g.cs
