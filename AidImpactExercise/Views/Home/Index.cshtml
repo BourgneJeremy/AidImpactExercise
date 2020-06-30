@@ -3,6 +3,31 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to AidMap</h1>
+    <p>The first solution that helps you to discover the main french cities</p>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-group">
+
+                    <li class="list-group-item">
+                        <h3>Paris</h3><br />
+                        <button type="button" class="paris btn btn-primary text-right">Display</button>
+                    </li>
+                    <li class="list-group-item">
+                        <h3>Lyon</h3><br />
+                        <button type="button" class="lyon btn btn-primary text-right lyon">Display</button>
+                    </li>
+                    <li class="list-group-item">
+                        <h3>Toulouse</h3><br />
+                        <button type="button" class="toulouse btn btn-primary text-right toulouse">Display</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-9" style="height: 500px; width: 1300px;" id="myMap">
+            </div>
+        </div>
+    </div>
 </div>
