@@ -40,5 +40,17 @@ namespace AidImpactExercise.Controllers
 
             return RedirectToAction("Post", "Point", point);
         }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            Point point = new Point() { Id = id };
+            _db.Points.Attach(point);
+            _db.Points.Remove(point);
+            _db.SaveChanges();
+
+            // Follow the same redirection as the login method
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
