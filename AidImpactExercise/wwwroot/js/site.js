@@ -21,6 +21,10 @@ var lyonOnce = false;
 
 displayPoints();
 
+function displayCustomPoint(longitude, latitude) {
+    var newPoint = L.marker([longitude, latitude]).addTo(myMap);
+}
+
 function displayPoints() {
     $(".paris").click(() => {
 

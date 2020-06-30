@@ -11,16 +11,19 @@ namespace AidImpactExercise.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly PointDataContext _db;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, PointDataContext _db)
         {
-            _logger = logger;
+            this._logger = logger;
+            this._db = _db;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var points = _db.Points.Take(5).ToArray();
+            return View(points);
         }
 
         public IActionResult Privacy()

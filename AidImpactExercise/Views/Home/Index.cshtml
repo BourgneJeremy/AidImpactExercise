@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<AidImpactExercise.Models.Point>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -23,12 +24,21 @@
                         <h3>Toulouse</h3><br />
                         <button type="button" class="toulouse btn btn-primary text-right toulouse">Display</button>
                     </li>
+                    @foreach (var point in Model)
+                    {
+                    <li class="list-group-item">
+                        <h3>@point.Name</h3><br />
+                        <p>Longitude : @point.Longitude</p>
+                        <p>Latitude : @point.Latitude</p>
+                        <button type="button" onclick='displayCustomPoint(@point.Longitude, @point.Latitude)' class="btn btn-primary text-right">Display</button>
+                    </li>
+                    }
                 </ul>
             </div>
             <div class="col-md-9" style="height: 500px; width: 1300px;" id="myMap">
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <a class="btn btn-outline-success ml-5" asp-area="" asp-controller="Point" asp-action="Create">Create a new point</a>
         </div>
     </div>
